@@ -17,7 +17,7 @@ def main():
         os.mkdir("outputs/A")
     if not os.path.exists("outputs/B"):
         os.mkdir("outputs/B")
-
+    
     size = 256
     selected_epoch = 7
 
