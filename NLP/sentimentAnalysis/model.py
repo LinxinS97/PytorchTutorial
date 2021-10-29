@@ -23,7 +23,7 @@ class Model(nn.Module):
         self.softmax = nn.Softmax(dim=1)
 
     def forward(self, x):
-        embed = self.embedding(x)  # output: [batchsize, seq_len, embed_size]
+        embed = self.embedding(x)  # output: [batch_size, seq_len, embed_size]
         out, _ = self.lstm(embed)
         out = torch.cat((embed, out), 2)
         out = F.relu(out)
